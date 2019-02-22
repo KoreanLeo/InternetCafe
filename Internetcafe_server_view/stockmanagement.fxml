@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="646.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane prefHeight="646.0" prefWidth="810.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="매출관리">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="632.0" prefWidth="800.0">
+                     <children>
+                        <Separator orientation="VERTICAL" prefHeight="606.0" prefWidth="0.0" />
+                        <Label layoutX="61.0" layoutY="22.0" text="분류">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="salesMoney" layoutX="32.0" layoutY="70.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="100.0" text="현금" />
+                        <Separator layoutX="157.0" layoutY="1.0" orientation="VERTICAL" prefHeight="606.0" prefWidth="0.0" />
+                        <Button id="salesCard" layoutX="32.0" layoutY="170.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="100.0" text="카드" />
+                        <TableView id="salesView" layoutX="158.0" layoutY="50.0" prefHeight="536.0" prefWidth="650.0" translateY="20.0">
+                           <columns>
+                              <TableColumn id="salesWay" text="결제수단" />
+                              <TableColumn id="salesname" prefWidth="74.0" text="ID" />
+                              <TableColumn id="salesId" prefWidth="164.0" text="상품명" />
+                              <TableColumn id="salesmenu" prefWidth="54.0" text="수량" />
+                              <TableColumn id="salesValue" prefWidth="95.0" text="상품금액" />
+                              <TableColumn id="salesDate" prefWidth="179.0" text="시간" />
+                           </columns>
+                        </TableView>
+                        <Button id="salesSearchBtn" layoutX="394.0" layoutY="20.0" mnemonicParsing="false" text="검색" />
+                        <TextField id="salesSearchTxt" layoutX="262.0" layoutY="20.0" prefHeight="29.0" prefWidth="132.0" promptText="상품명" />
+                        <ComboBox id="salesCombo" layoutX="168.0" layoutY="20.0" prefHeight="29.0" prefWidth="94.0" promptText="분류" />
+                        <Button id="salesChart" layoutX="650.0" layoutY="20.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="50.0" text="차트" />
+                        <Button id="slaesNew" layoutX="710.0" layoutY="20.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="80.0" text="새로고침" />
+                        <Label id="slaesTotal" layoutX="556.0" layoutY="25.0" text="0" />
+                        <Label layoutX="456.0" layoutY="25.0" text="총금액:" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button id="salesExit" layoutX="717.0" layoutY="43.0" mnemonicParsing="false" text="종료" translateY="-40.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="347.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <Button id="measage11Send" layoutX="70.0" layoutY="310.0" mnemonicParsing="false" text="보내기" />
+      <Button id="measage11Cancel" layoutX="160.0" layoutY="310.0" mnemonicParsing="false" text="취소" />
+      <TextField id="measage11Field" layoutY="275.0" prefHeight="29.0" prefWidth="300.0" />
+      <TextArea id="measage11Area" prefHeight="275.0" prefWidth="300.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="809.0" style="-fx-background-color: #DCDCDC;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView id="t1orderTableView" layoutY="1.0" prefHeight="565.0" prefWidth="808.0">
+        <columns>
+            <TableColumn id="t1ordernum" prefWidth="44.0" text="자리" />
+          <TableColumn id="t1orderuserID" prefWidth="73.0" text="아이디" />
+          <TableColumn id="t1ordermenu" prefWidth="81.0" text="상품" />
+            <TableColumn id="t1orderamount" prefWidth="47.0" text="수량" />
+            <TableColumn id="t1orderfice" prefWidth="102.0" text="가격" />
+            <TableColumn id="t1ordermway" prefWidth="84.0" text="결제수단" />
+            <TableColumn id="t1orderunit" prefWidth="81.0" text="화폐" />
+            <TableColumn id="t1orderask" prefWidth="161.0" text="요청사항" />
+            <TableColumn id="t1ordermdate" prefWidth="132.0" text="시간" />
+        </columns>
+      </TableView>
+      <Button id="t1orderregister" layoutX="345.0" layoutY="569.0" mnemonicParsing="false" text="닫기" />
+      <Button id="newOrderTable" layoutX="426.0" layoutY="569.0" mnemonicParsing="false" text="새로고침" />
+   </children>
+</AnchorPane>
