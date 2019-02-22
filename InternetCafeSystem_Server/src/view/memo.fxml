@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #4C4C4C;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextArea id="t1Memo" fx:id="t1Memo" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: #4C4C4C;" />
+      <Button id="t1MemoBtnSave" layoutX="129.0" layoutY="469.0" mnemonicParsing="false" text="저장" />
+      <Button id="t1MemoBtnCancel" layoutX="226.0" layoutY="469.0" mnemonicParsing="false" text="취소" />
+   </children>
+</AnchorPane>

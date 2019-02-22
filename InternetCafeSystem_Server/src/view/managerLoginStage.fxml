@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView id="mlsAuto" fitHeight="144.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../bin/images/logo.png"/>
+         </image>
+      </ImageView>
+      <Button id="mlslog1" alignment="TOP_LEFT" layoutX="334.0" layoutY="159.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="71.0" prefWidth="88.0" style="-fx-background-color: #3F48CC;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <BoxBlur />
+         </effect></Button>
+      <Button id="mlsExit" layoutX="452.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Exit" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TextField id="mlsId" layoutX="160.0" layoutY="160.0" />
+      <PasswordField id="mlsPassword" layoutX="160.0" layoutY="200.0" />
+      <Label contentDisplay="TOP" layoutX="90.0" layoutY="164.0" prefHeight="19.0" prefWidth="57.0" text="       ID" textFill="WHITE" />
+      <Label contentDisplay="TOP" layoutX="59.0" layoutY="204.0" prefHeight="19.0" prefWidth="88.0" text="PASSWORD" textFill="WHITE" />
+      <Button id="mlslog2" layoutX="348.0" layoutY="180.0" mnemonicParsing="false" style="-fx-background-color: #3F48CC;" text="Login" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

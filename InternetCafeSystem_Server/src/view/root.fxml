@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RootController">
+   <children>
+      <TabPane prefHeight="800.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="매장관리">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #242424;">
+                     <children>
+                        <ImageView fx:id="t1Logout1" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="180.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logout.gif" />
+                           </image>
+           </ImageView>
+                        <Label layoutX="180.0" layoutY="25.0" prefHeight="24.0" prefWidth="83.0" text="좌석" textFill="#aeacac" />
+                        <Button fx:id="t1BtnMemo" layoutX="14.0" layoutY="90.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="80.0" style="-fx-background-color: #3F3F3F;" text="메모" textFill="#aeacac">
+                        <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <ImageView fx:id="t1Logout2" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="380.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logout.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logout3" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="580.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logout.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logout4" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="780.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logout.gif" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="t1BtnOrder" layoutX="14.0" layoutY="150.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="80.0" style="-fx-background-color: #3F3F3F;" text="주문현황" textFill="#aeacac">
+                        <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <ImageView fx:id="t1Logon1" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="180.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logon.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logon2" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="380.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logon.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logon3" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="580.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logon.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logon4" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="780.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logon.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logout8" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="780.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logout.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logout7" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="580.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logout.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logout6" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="380.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logout.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logout5" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="180.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logout.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="tLlogout9" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="180.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logout.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logout10" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="380.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logout.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logout11" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="580.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logout.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logout12" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="780.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logout.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logout16" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="780.0" layoutY="570.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logout.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logout15" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="580.0" layoutY="570.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logout.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logout14" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="380.0" layoutY="570.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logout.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logout13" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="180.0" layoutY="570.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logout.gif" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logon8" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="780.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logon.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logon7" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="580.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logon.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logon6" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="380.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logon.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logon5" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="180.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logon.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logon9" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="180.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logon.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logon10" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="380.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logon.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logon11" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="580.0" layoutY="412.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logon.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logon12" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="780.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logon.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logon16" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="780.0" layoutY="570.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logon.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logon15" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="580.0" layoutY="570.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logon.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logon14" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="380.0" layoutY="570.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logon.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="t1Logon13" blendMode="ADD" cacheHint="SCALE" depthTest="ENABLE" fitHeight="120.0" fitWidth="155.0" layoutX="180.0" layoutY="570.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 3;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Glow level="0.34" />
+                           </effect>
+                           <image>
+                              <Image url="@../../bin/images/logon.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="180.0" layoutY="71.0" text="1" textFill="WHITE" />
+                        <Label layoutX="380.0" layoutY="71.0" prefHeight="19.0" prefWidth="4.0" text="2" textFill="WHITE" />
+                        <Label layoutX="580.0" layoutY="71.0" prefHeight="19.0" prefWidth="4.0" text="3" textFill="WHITE" />
+                        <Label layoutX="780.0" layoutY="71.0" prefHeight="19.0" prefWidth="4.0" text="4" textFill="WHITE" />
+                        <Label layoutX="180.0" layoutY="231.0" prefHeight="19.0" prefWidth="4.0" text="5" textFill="WHITE" />
+                        <Label layoutX="380.0" layoutY="231.0" prefHeight="19.0" prefWidth="4.0" text="6" textFill="WHITE" />
+                        <Label layoutX="580.0" layoutY="231.0" prefHeight="19.0" prefWidth="4.0" text="7" textFill="WHITE" />
+                        <Label layoutX="780.0" layoutY="231.0" prefHeight="19.0" prefWidth="4.0" text="8" textFill="WHITE" />
+                        <Label layoutX="180.0" layoutY="391.0" prefHeight="19.0" prefWidth="21.0" text="9" textFill="WHITE" />
+                        <Label layoutX="380.0" layoutY="391.0" prefHeight="19.0" prefWidth="21.0" text="10" textFill="WHITE" />
+                        <Label layoutX="580.0" layoutY="391.0" prefHeight="19.0" prefWidth="22.0" text="11" textFill="WHITE" />
+                        <Label layoutX="780.0" layoutY="391.0" prefHeight="19.0" prefWidth="23.0" text="12" textFill="WHITE" />
+                        <Label layoutX="180.0" layoutY="551.0" prefHeight="19.0" prefWidth="24.0" text="13" textFill="WHITE" />
+                        <Label layoutX="380.0" layoutY="551.0" prefHeight="19.0" prefWidth="22.0" text="14" textFill="WHITE" />
+                        <Label layoutX="580.0" layoutY="551.0" prefHeight="19.0" prefWidth="22.0" text="15" textFill="WHITE" />
+                        <Label layoutX="780.0" layoutY="551.0" prefHeight="19.0" prefWidth="22.0" text="16" textFill="WHITE" />
+                        <Button fx:id="t1BtnManager" layoutX="14.0" layoutY="210.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="80.0" style="-fx-background-color: #3F3F3F;" text="관리자" textFill="#aeacac">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="회원관리">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="t2TableView" layoutY="50.0" prefHeight="713.0" prefWidth="1000.0">
+                           <columns>
+                              <TableColumn fx:id="t2name" text="이름" />
+                              <TableColumn fx:id="t2Id" prefWidth="110.0" text="ID" />
+                              <TableColumn fx:id="t2IPassword" prefWidth="110.0" text="PASSWORD" />
+                              <TableColumn fx:id="t2Gender" prefWidth="72.0" text="성별" />
+                              <TableColumn fx:id="t2age" prefWidth="94.0" text="나이" />
+                              <TableColumn fx:id="t2PhoneNumber" prefWidth="114.0" text="휴대폰번호" />
+                              <TableColumn fx:id="t2Email" prefWidth="171.0" text="이메일" />
+                              <TableColumn fx:id="t2Date" prefWidth="248.0" text="등록일" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="t2SearchButton" layoutX="263.0" layoutY="6.0" mnemonicParsing="false" text="검색">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <TextField fx:id="t2SearchTxt" layoutX="90.0" layoutY="6.0" promptText="이름" />
+                        <Button fx:id="t2NewSence" layoutX="906.0" layoutY="11.0" mnemonicParsing="false" text="새로고침">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="t2SUpdateButton" layoutX="351.0" layoutY="7.0" mnemonicParsing="false" text="수정">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="t2SDeleteButton" layoutX="437.0" layoutY="6.0" mnemonicParsing="false" text="삭제">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <ComboBox fx:id="t2SearchCombo" layoutX="1.0" layoutY="6.0" prefHeight="29.0" prefWidth="88.0" promptText="선택" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="programExit" layoutX="922.0" layoutY="14.0" mnemonicParsing="false" text="종료" translateY="-10.0" />
+   </children>
+</AnchorPane>
