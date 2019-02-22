@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="189.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#353535" height="193.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" width="500.0" />
+      <Button id="timeSystemAddCharge" layoutX="375.0" layoutY="122.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="122.0" text="선불추가">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Glow />
+         </effect>
+      </Button>
+      <Button id="timeSystemMeasage" layoutX="256.0" layoutY="122.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="241.0" text="메세지">
+         <effect>
+            <Glow />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button id="timeSystemExit" layoutX="256.0" layoutY="46.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="241.0" style="-fx-background-color: red;" text="사용종료" textFill="WHITE">
+         <font>
+            <Font size="35.0" />
+         </font>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="9.0" layoutY="116.0" text="시작시간:" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font></Label>
+      <Separator layoutX="252.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="193.0" prefWidth="0.0" />
+      <ImageView fitHeight="46.0" fitWidth="200.0" layoutX="335.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="260.0" prefHeight="46.0" prefWidth="70.0" text="9번" textFill="WHITE">
+         <font>
+            <Font size="32.0" />
+         </font>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#000000a8" height="10.0" layoutY="-2.0" stroke="TRANSPARENT" strokeType="INSIDE" width="500.0" />
+      <Label id="timeSystemRemainTime" layoutX="119.0" layoutY="77.0" text="00:00:00" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label id="timeSystemStartTime" layoutX="99.0" layoutY="117.0" text="00:00:00" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="9.0" layoutY="156.0" prefHeight="25.0" prefWidth="241.0" text="OSHPC에 오신걸 환영합니다." textFill="RED">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+      </Label>
+      <ImageView fitHeight="100.0" fitWidth="260.0" layoutX="-8.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/add.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="179.0" layoutY="-2.0" text="광고가능합니다" textFill="#bcb8b8">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="9.0" layoutY="76.0" text="이용시간" textFill="WHITE">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
