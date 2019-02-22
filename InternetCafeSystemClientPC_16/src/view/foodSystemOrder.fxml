@@ -1,0 +1,1127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="804.0" prefWidth="912.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="-2.0" mnemonicParsing="false" prefHeight="580.0" prefWidth="180.0" style="-fx-background-color: #2B2B2B;" />
+      <Button layoutX="178.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="740.0" style="-fx-background-color: #121212;">
+         <effect>
+            <Glow />
+         </effect></Button>
+      <Label id="menuSet" alignment="CENTER" layoutY="100.0" prefHeight="80.0" prefWidth="180.0" style="-fx-background-color: #121212;" text="세트메뉴" textAlignment="CENTER" textFill="#c6c4c4">
+         <font>
+            <Font size="35.0" />
+         </font>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label id="menuDrink" alignment="CENTER" layoutY="180.0" prefHeight="80.0" prefWidth="180.0" style="-fx-background-color: #121212;" text="음료류" textAlignment="CENTER" textFill="#c6c4c4">
+         <font>
+            <Font size="35.0" />
+         </font>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label id="menuRamen" fx:id="menuRamen" alignment="CENTER" layoutY="260.0" prefHeight="80.0" prefWidth="180.0" style="-fx-background-color: #121212;" text="라면류" textAlignment="CENTER" textFill="#c6c4c4">
+         <font>
+            <Font size="35.0" />
+         </font>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label id="menuBop" alignment="CENTER" layoutY="340.0" prefHeight="80.0" prefWidth="180.0" style="-fx-background-color: #121212;" text="식사류" textAlignment="CENTER" textFill="#c6c4c4">
+         <font>
+            <Font size="35.0" />
+         </font>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label id="menuHotdog" alignment="CENTER" layoutY="420.0" prefHeight="80.0" prefWidth="180.0" style="-fx-background-color: #121212;" text="핫도그" textAlignment="CENTER" textFill="#c6c4c4">
+         <font>
+            <Font size="35.0" />
+         </font>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label id="menuSnack" alignment="CENTER" layoutY="500.0" prefHeight="80.0" prefWidth="180.0" style="-fx-background-color: #121212;" text="간식" textAlignment="CENTER" textFill="#c6c4c4">
+         <font>
+            <Font size="35.0" />
+         </font>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="20.0" prefHeight="80.0" prefWidth="180.0" style="-fx-background-color: #121212;" text="Menu category" textAlignment="CENTER" textFill="#e4e413">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="20.0" />
+         </font>
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+      </Label>
+      <TableView id="foodTable" layoutY="604.0" prefHeight="202.0" prefWidth="338.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="상품명" />
+          <TableColumn prefWidth="75.0" text="상품금액" />
+            <TableColumn prefWidth="75.0" text="수량" />
+            <TableColumn prefWidth="112.0" text="최종금액" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#282828f5" height="24.0" layoutX="-2.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="920.0" />
+      <Separator layoutX="179.0" layoutY="78.0" prefHeight="3.0" prefWidth="739.0" />
+      <Separator layoutY="575.0" prefHeight="9.0" prefWidth="912.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#282828f5" height="26.0" layoutX="-2.0" layoutY="579.0" stroke="BLACK" strokeType="INSIDE" width="338.0" />
+      <Label layoutX="4.0" layoutY="582.0" text="상품목록" textFill="#c6c4c4" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#282828" height="226.0" layoutX="335.0" layoutY="579.0" stroke="BLACK" strokeType="INSIDE" width="327.0" />
+      <TextArea id="ordermesage" layoutX="336.0" layoutY="634.0" prefHeight="171.0" prefWidth="327.0" promptText="주문시 요청사항">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextArea>
+      <Label layoutX="341.0" layoutY="582.0" text="결제" textFill="#c6c4c4" />
+      <ComboBox id="moneyWay" layoutX="456.0" layoutY="605.0" prefHeight="29.0" prefWidth="206.0" promptText="결제금액">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+         <fx:define><ToggleGroup fx:id="group"/></fx:define>
+      <RadioButton id="realmoney" layoutX="337.0" layoutY="610.0" mnemonicParsing="false" text="현금" textFill="#c6c4c4" toggleGroup="$group"  UserData="현금">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></RadioButton>
+      <RadioButton id="cardmoney" layoutX="397.0" layoutY="610.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" text="카드" textFill="#c6c4c4" toggleGroup="$group"  UserData="카드">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></RadioButton>
+      <Button id="btnOrder" contentDisplay="CENTER" layoutX="661.0" layoutY="673.0" mnemonicParsing="false" prefHeight="131.0" prefWidth="257.0" style="-fx-background-color: #FF0000;" text="상품 주문하기" textFill="#eeeeee">
+         <effect>
+            <Glow level="1.0" />
+         </effect>
+         <font>
+            <Font size="32.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TextField id="notice" alignment="CENTER" layoutX="661.0" layoutY="578.0" prefHeight="96.0" prefWidth="258.0" promptText="최종 결제금액">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+      <Label layoutX="600.0" layoutY="25.0" text="상품 이미지가 실제 이미지와 다를 수 있습니다." textFill="#868282" />
+   
+  
+      <ImageView fitHeight="20.0" fitWidth="94.0" layoutX="-2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+      <ScrollPane id="menuSetSP" layoutX="180.0" layoutY="75.0" prefHeight="502.0" prefWidth="739.0">
+         <content>
+            <AnchorPane fx:id="menuDrinkAp11111" minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="738.0">
+               <children>
+                  <AnchorPane layoutX="24.0" layoutY="21.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../InternetCafeSystemClient5/src/images/신라면.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name00" layoutX="7.0" layoutY="5.0" text="세트1(신라면+콜라)" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount00" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP00" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM00" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price00" layoutX="5.0" layoutY="172.0" text="4000">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="484.0" layoutY="21.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/오리지날핫도그.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name01" layoutX="7.0" layoutY="5.0" text="세트3(오리지날핫도그+콜라)" textFill="#f2f2f2" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount01" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP01" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM01" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price01" layoutX="5.0" layoutY="172.0" text="3500" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="254.0" layoutY="21.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="124.0" fitWidth="206.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/김치볶음밥.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name02" layoutX="7.0" layoutY="5.0" text="세트2(김치볶음밥+콜라)" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount02" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP02" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM02" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price02" layoutX="5.0" layoutY="172.0" text="5000" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <ScrollPane id="menuDrinkSP" layoutX="180.0" layoutY="75.0" prefHeight="502.0" prefWidth="739.0">
+         <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1500.0" prefWidth="740.0">
+               <children>
+                  <AnchorPane layoutX="24.0" layoutY="21.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/사이다.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name10" layoutX="7.0" layoutY="5.0" text="사이다" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount10" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP10" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM10" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price10" layoutX="5.0" layoutY="172.0" text="1500" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="484.0" layoutY="21.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/몬스터에너지%20.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name11" layoutX="7.0" layoutY="5.0" text="몬스터에너지" textFill="#f2f2f2" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount11" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP11" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM11" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price11" layoutX="5.0" layoutY="172.0" text="2200" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="254.0" layoutY="21.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="124.0" fitWidth="206.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/콜라.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name12" layoutX="7.0" layoutY="5.0" text="콜라" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount12" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP12" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM12" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price12" layoutX="5.0" layoutY="172.0" text="1500" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="254.0" layoutY="271.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="124.0" fitWidth="206.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/몬스터시트라.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name13" layoutX="7.0" layoutY="5.0" text="몬스터시트라" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount13" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP13" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM13" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price13" layoutX="5.0" layoutY="172.0" text="2200" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="484.0" layoutY="271.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/파워에이드.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name14" layoutX="7.0" layoutY="5.0" text="파워에이드" textFill="#f2f2f2" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount14" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP14" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM14" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price14" layoutX="5.0" layoutY="172.0" text="1500" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="24.0" layoutY="271.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/몬스터울트라.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name15" layoutX="7.0" layoutY="5.0" text="몬스터울트라" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount15" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP15" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM15" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price15" layoutX="5.0" layoutY="172.0" text="2200" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="24.0" layoutY="521.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/코코망고.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name16" layoutX="7.0" layoutY="5.0" text="코코망고" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount16" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP16" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM16" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price16" layoutX="5.0" layoutY="172.0" text="1500" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="254.0" layoutY="521.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="124.0" fitWidth="206.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/코코복숭아.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name17" layoutX="7.0" layoutY="5.0" text="코코복숭아" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount17" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP17" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM17" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price17" layoutX="5.0" layoutY="172.0" text="1500" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="484.0" layoutY="521.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/코코화이트.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name18" layoutX="7.0" layoutY="5.0" text="코코팜" textFill="#f2f2f2" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount18" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP18" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM18" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price18" layoutX="5.0" layoutY="172.0" text="1500" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="484.0" layoutY="771.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/레몬에이드.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name19" layoutX="7.0" layoutY="5.0" text="레몬에이드" textFill="#f2f2f2" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount19" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP19" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM19" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price19" layoutX="5.0" layoutY="172.0" text="1500" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="254.0" layoutY="771.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="124.0" fitWidth="206.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/포도봉봉.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name110" layoutX="7.0" layoutY="5.0" text="포도봉봉" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount110" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP110" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM110" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price110" layoutX="5.0" layoutY="172.0" text="1500" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="24.0" layoutY="771.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/조지아오리지널.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name111" layoutX="7.0" layoutY="5.0" text="조지아오리지널" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount111" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP111" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM111" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price111" layoutX="5.0" layoutY="172.0" text="1000" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="24.0" layoutY="1021.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/조지아카페라떼.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name112" layoutX="7.0" layoutY="5.0" text="조지아카페라떼" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount112" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP112" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM112" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price112" layoutX="5.0" layoutY="172.0" text="1000" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="254.0" layoutY="1021.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="124.0" fitWidth="206.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/물.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name113" layoutX="7.0" layoutY="5.0" text="물" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount113" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP113" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM113" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price113" layoutX="5.0" layoutY="172.0" text="1000" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </content></ScrollPane>
+      <ScrollPane id="menuRamenSP" layoutX="180.0" layoutY="75.0" prefHeight="502.0" prefWidth="739.0">
+         <content>
+            <AnchorPane fx:id="menuDrinkAp11" minHeight="0.0" minWidth="0.0" prefHeight="784.0" prefWidth="738.0">
+               <children>
+                  <AnchorPane layoutX="24.0" layoutY="21.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/신라면.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name20" layoutX="7.0" layoutY="5.0" text="신라면" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount20" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP20" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM20" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price20" layoutX="5.0" layoutY="172.0" text="3000">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="484.0" layoutY="21.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/진라면.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name21" layoutX="7.0" layoutY="5.0" text="진라면" textFill="#f2f2f2" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount21" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP21" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM21" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price21" layoutX="5.0" layoutY="172.0" text="3000" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="254.0" layoutY="21.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="124.0" fitWidth="206.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/삼양라면.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name22" layoutX="7.0" layoutY="5.0" text="삼양라면" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount22" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP22" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM22" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price22" layoutX="5.0" layoutY="172.0" text="3000" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="254.0" layoutY="271.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="124.0" fitWidth="206.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/짜왕.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name23" layoutX="7.0" layoutY="5.0" text="짜왕" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount23" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP23" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM23" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price23" layoutX="5.0" layoutY="172.0" text="3500" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="484.0" layoutY="271.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/참깨라면.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name24" layoutX="7.0" layoutY="5.0" text="참깨라면" textFill="#f2f2f2" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount24" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP24" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM24" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price24" layoutX="5.0" layoutY="172.0" text="3000" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="24.0" layoutY="271.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/짜파게티.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name25" layoutX="7.0" layoutY="5.0" text="짜파게티" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount25" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP25" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM25" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price25" layoutX="5.0" layoutY="172.0" text="3000" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="24.0" layoutY="521.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/무파마.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name26" layoutX="7.0" layoutY="5.0" text="무파마" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount26" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP26" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM26" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price26" layoutX="5.0" layoutY="172.0" text="3000" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="254.0" layoutY="521.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/맛있는라면.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name27" layoutX="7.0" layoutY="5.0" text="맛있는라면" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount27" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP27" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM27" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price27" layoutX="5.0" layoutY="172.0" text="3000" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <ScrollPane id="menuBopSP" layoutX="180.0" layoutY="75.0" prefHeight="502.0" prefWidth="739.0">
+         <content>
+            <AnchorPane fx:id="menuDrinkAp1" minHeight="0.0" minWidth="0.0" prefHeight="784.0" prefWidth="738.0">
+               <children>
+                  <AnchorPane layoutX="24.0" layoutY="21.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/김치볶음밥.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name30" layoutX="7.0" layoutY="5.0" text="김치볶음밥" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount30" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP30" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM30" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price30" layoutX="5.0" layoutY="172.0" text="4000">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor></Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="484.0" layoutY="21.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/새우볶음밥.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name31" layoutX="7.0" layoutY="5.0" text="새우볶음밥" textFill="#f2f2f2" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount31" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP31" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM31" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price31" layoutX="5.0" layoutY="172.0" text="4000" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="254.0" layoutY="21.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="124.0" fitWidth="206.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/낙지볶음밥.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name32" layoutX="7.0" layoutY="5.0" text="낙지볶음밥" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount32" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP32" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM32" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price32" layoutX="5.0" layoutY="172.0" text="4000" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="254.0" layoutY="271.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="124.0" fitWidth="206.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/잡채볶음밥.JPG" />
+                           </image>
+                        </ImageView>
+                        <Label id="name33" layoutX="7.0" layoutY="5.0" text="잡채볶음밥" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount33" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP33" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM33" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price33" layoutX="5.0" layoutY="172.0" text="4000" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="484.0" layoutY="271.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/해물볶음밥.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name34" layoutX="7.0" layoutY="5.0" text="해물복음밥" textFill="#f2f2f2" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount34" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP34" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM34" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price34" layoutX="5.0" layoutY="172.0" text="4000" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="24.0" layoutY="271.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/치킨카레볶음밥.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name35" layoutX="7.0" layoutY="5.0" text="치킨카레볶음밥" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount35" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP35" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM35" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price35" layoutX="5.0" layoutY="172.0" text="4000" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="24.0" layoutY="521.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/햄야채볶음밥.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name36" layoutX="7.0" layoutY="5.0" text="햄야채볶음밥" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount36" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP36" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM36" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price36" layoutX="5.0" layoutY="172.0" text="4000" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <ScrollPane id="menuHotdogSP" layoutX="180.0" layoutY="75.0" prefHeight="502.0" prefWidth="739.0">
+         <content>
+            <AnchorPane fx:id="menuDrinkAp111" minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="738.0">
+               <children>
+                  <AnchorPane layoutX="24.0" layoutY="21.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/오리지날핫도그.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name40" layoutX="7.0" layoutY="5.0" text="오리지날핫도그" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount40" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP40" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM40" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price40" layoutX="5.0" layoutY="172.0" text="2500">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="484.0" layoutY="21.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/화이트렐리쉬%20핫도그.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name41" layoutX="7.0" layoutY="5.0" text="화이트렐리쉬핫도그" textFill="#f2f2f2" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount41" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP41" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM41" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price41" layoutX="5.0" layoutY="172.0" text="3000" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="254.0" layoutY="21.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="124.0" fitWidth="206.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/렐리쉬핫도그.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name42" layoutX="7.0" layoutY="5.0" text="렐리쉬핫도그" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount42" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP42" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM42" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price42" layoutX="5.0" layoutY="172.0" text="3000" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="254.0" layoutY="271.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="124.0" fitWidth="206.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/어니언핫도그.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name43" layoutX="7.0" layoutY="5.0" text="어니언핫도그" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount43" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP43" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM43" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price43" layoutX="5.0" layoutY="172.0" text="3000" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="484.0" layoutY="271.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/치킨텐더핫도그.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name44" layoutX="7.0" layoutY="5.0" text="치킨텐더핫도그" textFill="#f2f2f2" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount44" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP44" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM44" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price44" layoutX="5.0" layoutY="172.0" text="4000" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="24.0" layoutY="271.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/할라피뇨치즈핫도그.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name45" layoutX="7.0" layoutY="5.0" text="할라피뇨치즈핫도그" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount45" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP45" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM45" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price45" layoutX="5.0" layoutY="172.0" text="3500" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <ScrollPane id="menuSnackSP" layoutX="180.0" layoutY="75.0" prefHeight="502.0" prefWidth="739.0">
+         <content>
+            <AnchorPane fx:id="menuDrinkAp1111" minHeight="0.0" minWidth="0.0" prefHeight="1000.0" prefWidth="738.0">
+               <children>
+                  <AnchorPane layoutX="24.0" layoutY="21.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/꼬꼬스낵.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name50" layoutX="7.0" layoutY="5.0" text="닭다리꼬꼬" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount50" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP50" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM50" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price50" layoutX="5.0" layoutY="172.0" text="500">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="484.0" layoutY="21.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/숏다리.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name51" layoutX="7.0" layoutY="5.0" text="숏다리" textFill="#f2f2f2" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount51" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP51" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM51" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price51" layoutX="5.0" layoutY="172.0" text="1300" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="254.0" layoutY="21.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="124.0" fitWidth="206.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/바나나킥.jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name52" layoutX="7.0" layoutY="5.0" text="바나나킥" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount52" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP52" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM52" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price52" layoutX="5.0" layoutY="172.0" text="1500" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="254.0" layoutY="271.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="124.0" fitWidth="206.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/초코칩쿠키.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name53" layoutX="7.0" layoutY="5.0" text="초코칩쿠키" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount53" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP53" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM53" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price53" layoutX="5.0" layoutY="172.0" text="1500" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="484.0" layoutY="271.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/칸쵸.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name54" layoutX="7.0" layoutY="5.0" text="칸쵸" textFill="#f2f2f2" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount54" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP54" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM54" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price54" layoutX="5.0" layoutY="172.0" text="1500" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="24.0" layoutY="271.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/오감자.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name55" layoutX="7.0" layoutY="5.0" text="오감자" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount55" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP55" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM55" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price55" layoutX="5.0" layoutY="172.0" text="1500" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="24.0" layoutY="531.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/콘초.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name56" layoutX="7.0" layoutY="5.0" text="콘쵸" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount56" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP56" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM56" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price56" layoutX="5.0" layoutY="172.0" text="1500" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="484.0" layoutY="531.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/포카칩.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name57" layoutX="7.0" layoutY="5.0" text="포카칩" textFill="#f2f2f2" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount57" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP57" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM57" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price57" layoutX="5.0" layoutY="172.0" text="1500" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="254.0" layoutY="531.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="124.0" fitWidth="206.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/포스틱.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name58" layoutX="7.0" layoutY="5.0" text="포스틱" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount58" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP58" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM58" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price58" layoutX="5.0" layoutY="172.0" text="1500" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="24.0" layoutY="791.0" prefHeight="214.0" prefWidth="200.0" style="-fx-background-color: black;">
+                     <children>
+                        <ImageView fitHeight="131.0" fitWidth="200.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/홈런볼.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label id="name59" layoutX="7.0" layoutY="5.0" text="홈런볼" textFill="WHITE" />
+                        <ProgressBar layoutY="159.0" prefHeight="44.0" prefWidth="200.0" progress="0.0" />
+                        <Label id="amount59" layoutX="126.0" layoutY="169.0" prefHeight="25.0" prefWidth="28.0" text="0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Button id="btnP59" layoutX="157.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="8.0" text="+" />
+                        <Button id="btnM59" layoutX="94.0" layoutY="167.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="13.0" text="-" />
+                        <Label id="price59" layoutX="5.0" layoutY="172.0" text="1500" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
