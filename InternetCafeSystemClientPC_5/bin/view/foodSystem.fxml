@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="106.0" prefWidth="355.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button id="foodSystem1" fx:id="showOrderstage1" mnemonicParsing="false" prefHeight="150.0" prefWidth="365.0" style="-fx-background-color: red;" text="Button">
+         <effect>
+            <Bloom threshold="0.43">
+               <input>
+                  <Shadow />
+               </input>
+            </Bloom>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView id="foodSystem2" fx:id="showOrderstage2" fitHeight="129.0" fitWidth="298.0" layoutX="34.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/food.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label id="foodSystemOn" layoutX="323.0" layoutY="7.0" text="Go!" textFill="#d11111">
+         <font>
+            <Font name="Showcard Gothic" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
