@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="160.0" prefWidth="257.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField id="measage1Field" layoutY="155.0" prefHeight="29.0" prefWidth="208.0" />
+      <TextArea id="mesageArea" prefHeight="155.0" prefWidth="257.0" style="-fx-background-color: black;" />
+      <Button id="mesageSend" layoutX="206.0" layoutY="155.0" mnemonicParsing="false" text="전송" />
+   </children>
+</AnchorPane>
