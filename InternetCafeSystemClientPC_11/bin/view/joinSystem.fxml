@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="445.0" prefWidth="436.0" style="-fx-background-color: #EAEAEA;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="45.0" text="이름:" />
+      <TextField id="joinName" layoutX="110.0" layoutY="6.0" />
+      <TextField id="joinID" layoutX="110.0" layoutY="36.0" />
+      <Label layoutX="10.0" layoutY="40.0" prefHeight="25.0" prefWidth="60.0" text="아이디:" />
+      <Label layoutX="10.0" layoutY="140.0" prefHeight="25.0" prefWidth="60.0" text="성별:" />
+      <Button id="joinIDCheck" layoutX="282.0" layoutY="39.0" mnemonicParsing="false" text="중복확인">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <ComboBox id="joinGender" layoutX="110.0" layoutY="138.0" prefHeight="29.0" prefWidth="88.0" promptText="선택">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <Label layoutX="10.0" layoutY="230.0" prefHeight="25.0" prefWidth="68.0" text="전화번호:" />
+      <TextField id="joinPhoenumber" layoutX="80.0" layoutY="228.0" promptText="-없이10~11자리입력" />
+      <TextField id="joinE_mailID" layoutX="80.0" layoutY="278.0" prefHeight="29.0" prefWidth="172.0" />
+      <Label layoutX="10.0" layoutY="280.0" prefHeight="25.0" prefWidth="68.0" text="이메일:" />
+      <Label layoutX="10.0" layoutY="180.0" prefHeight="25.0" prefWidth="68.0" text="생년월일:" />
+      <ComboBox id="joinYear" layoutX="110.0" layoutY="178.0" prefHeight="29.0" prefWidth="99.0" promptText="년도">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <ComboBox id="joinMonth" layoutX="208.0" layoutY="178.0" prefHeight="29.0" prefWidth="88.0" promptText="월">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <ComboBox id="joinDay" layoutX="296.0" layoutY="178.0" prefHeight="29.0" prefWidth="88.0" promptText="일">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <ComboBox id="joinE_mailAdressAuto" layoutX="252.0" layoutY="278.0" prefHeight="29.0" prefWidth="184.0" promptText="선택">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+      <Label layoutX="20.0" layoutY="347.0" prefHeight="29.0" prefWidth="219.0" text="*OSHPC에 오신걸 환영합니다." textFill="RED" />
+      <Label layoutX="370.0" layoutY="1.0" text="회원가입">
+         <effect>
+            <Glow level="1.0" />
+         </effect></Label>
+      <Button id="joinRegister" layoutX="140.0" layoutY="410.0" mnemonicParsing="false" text="등록">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button id="joinCancel" layoutX="240.0" layoutY="410.0" mnemonicParsing="false" text="취소">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TextField id="joinE_mailAdressWrite" layoutX="252.0" layoutY="308.0" prefHeight="29.0" prefWidth="184.0" promptText="직접입력" />
+      <Label layoutX="10.0" layoutY="70.0" prefHeight="25.0" prefWidth="68.0" text="비밀번호:" />
+      <PasswordField id="joinPaword1" layoutX="110.0" layoutY="66.0" promptText="6자리이상15자리이하" />
+      <PasswordField id="joinPaword2" layoutX="110.0" layoutY="96.0" promptText="재입력" />
+   </children>
+</AnchorPane>
