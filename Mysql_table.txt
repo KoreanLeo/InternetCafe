@@ -1,0 +1,22 @@
+	CREATE table member
+ 	(name char(30) not null,
+     userID   char(30)not null PRIMARY key,
+     password char(30)not null,
+	 gender char(8) not null,
+     age char(10) not null,
+     phoneNumber char(20) not null,
+     email char(50) not null,
+     mdate char(20) not null
+    )
+
+	CREATE table finalorder2
+ 	(num char(10) not null,
+     userID   char(10)not null,
+     menu char(15)not null,
+	 amount char(5) not null,
+     fice char(20) not null,
+     mway char(10) not null,
+     unit char(10) not null,
+	 ask char(100) ,
+     mdate char(30) not null
+    )
