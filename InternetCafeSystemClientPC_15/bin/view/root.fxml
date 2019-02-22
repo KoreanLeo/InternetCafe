@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="710.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RootController">
+   <children>
+      <ImageView fitHeight="748.0" fitWidth="1160.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/background.jpeg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="422.0" fitWidth="427.0" layoutX="27.0" layoutY="281.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/input.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="logBtn1" layoutX="330.0" layoutY="310.0" mnemonicParsing="false" prefHeight="87.0" prefWidth="82.0" style="-fx-background-color: #068FBD;" textFill="#1818bc" textOverrun="CLIP">
+         <effect>
+            <BoxBlur />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="logBtn2" layoutX="344.0" layoutY="336.0" prefHeight="36.0" prefWidth="58.0" text="LOGIN" textFill="#4026b5">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button fx:id="logJoin" layoutX="162.0" layoutY="422.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="133.0" text="JOIN">
+         <font>
+            <Font name="Baskerville Old Face" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="logsearchID" layoutX="296.0" layoutY="422.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="129.0" text="ID/PASSWORD">
+         <font>
+            <Font name="Baskerville Old Face" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="36.0" fitWidth="129.0" layoutX="34.0" layoutY="421.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image></ImageView>
+      <Separator layoutX="288.0" layoutY="422.0" orientation="VERTICAL" prefHeight="36.0" prefWidth="17.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Separator>
+      <Button fx:id="logExit" layoutX="38.0" layoutY="666.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="198.0" text="EXIT" textFill="RED">
+         <font>
+            <Font name="Baskerville Old Face" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="logAd" layoutX="1031.0" layoutY="691.0" text="*광고 가능합니다." />
+      <TextField fx:id="logtxtID" layoutX="168.0" layoutY="311.0" prefHeight="29.0" prefWidth="157.0" />
+      <PasswordField fx:id="logtxtPassword" layoutX="168.0" layoutY="340.0" prefHeight="29.0" prefWidth="157.0" />
+      <TextField fx:id="logCard" layoutX="168.0" layoutY="369.0" prefHeight="29.0" prefWidth="157.0" promptText="카드지원 안함" />
+   </children>
+</AnchorPane>
