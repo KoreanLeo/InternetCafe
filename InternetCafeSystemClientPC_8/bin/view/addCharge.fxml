@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="101.0" prefWidth="257.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ComboBox fx:id="addChargeCoupon" layoutX="16.0" layoutY="20.0" prefHeight="29.0" prefWidth="224.0" promptText="쿠폰선택" />
+      <Button fx:id="addChargePayment" layoutX="99.0" layoutY="60.0" mnemonicParsing="false" text="결제" />
+   </children>
+</AnchorPane>
